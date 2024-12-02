@@ -1,0 +1,122 @@
+/* Import Gotham font if not already done */
+@import url('https://fonts.googleapis.com/css2?family=Gotham:wght@100&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gotham', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 20px;
+    display: flex;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.dashboard-header .wordmark {
+    font-size: 20px;
+    color: #27bcac;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Chart Area */
+.charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.chart-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+}
+
+.full-width-chart {
+    flex: 100%;
+    height: 400px;
+}
+
+/* Apply Gotham font to chart canvas */
+.chart-card canvas {
+    background-color: #fff;
+}
+
+/* Apply Gotham font to chart title, legend, and axis labels */
+.chart-card .chart-title,
+.chart-card .chart-legend,
+.chart-card .chart-axis-labels,
+.chart-card .chart-tooltip {
+    font-family: 'Gotham', sans-serif;
+    font-weight: normal !important;
+}
+
+/* If you are using Chart.js or similar, you can specify font settings here */
+.chart-card canvas {
+    font-family: 'Gotham', sans-serif !important;
+    font-weight: normal !important;
+}
+
+/* Ensure chart legends are not bold */
+.chartjs-legend li span {
+    font-weight: normal !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dashboard-container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .charts-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .chart-card {
+        min-width: 100%;
+    }
+}

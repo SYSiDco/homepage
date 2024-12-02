@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SYSiD Performance</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="performance.css">
+  <!-- Include Gotham Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Gotham:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <!-- Include Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body data-page="performance">
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <!-- Replace this with an image if needed -->
+          <img src="" alt="" class="logo-img">
+        </div>
+        <!-- Burger Icon -->
+        <div class="burger-menu" onclick="toggleSidebar()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="Performance5.html">Performance</a></li>
+          <li><a href="Customers5.html">Customers</a></li>
+          <li><a href="Reports5.html">Reports</a></li>
+          <li><a href="Campaigns5.html">Campaigns</a></li>
+          <li><a href="Brands5.html">Brands</a></li>
+          <li><a href="Stores5.html">Stores</a></li>
+          <li><a href="Login.html">Log Out</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="dashboard-header">
+        <h4>Hi Krishna! See your performance at a glance.</h4>
+        <div class="wordmark">FLOWSIGHT</div>
+      </header>
+
+      <div class="dashboard-stats">
+        <div class="stat-card">
+          <h3>Acquired Customers</h3>
+          <p>1,200</p>
+        </div>
+        <div class="stat-card">
+          <h3>Repeat Buyers</h3>
+          <p>800</p>
+        </div>
+        <div class="stat-card">
+          <h3>Active Branches</h3>
+          <p>45</p>
+        </div>
+        <div class="stat-card">
+          <h3>Active Brands</h3>
+          <p>18</p>
+        </div>
+      </div>
+
+      <!-- Charts -->
+      <div class="charts-container">
+        <!-- Daily Redemptions (Area Chart) -->
+        <div class="chart-card full-width-chart">
+          <h3>Daily Redemptions</h3>
+          <canvas id="redemptionsChart"></canvas>
+        </div>
+
+        <!-- Time of Day -->
+        <div class="chart-card">
+          <h3>Time of Day</h3>
+          <canvas id="timeOfDayChart"></canvas>
+        </div>
+
+        <!-- Top Branches -->
+        <div class="chart-card">
+          <h3>Top Branches</h3>
+          <canvas id="branchLeaderboardChart"></canvas>
+        </div>
+
+        <!-- Day of Week -->
+        <div class="chart-card">
+          <h3>Day of Week</h3>
+          <canvas id="dayOfWeekChart"></canvas>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="performance.js"></script>
+
+</body>
+</html>

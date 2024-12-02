@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SYSiD Reports</title>
+  <!-- Include Gotham Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Gotham:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <!-- Include Flatpickr for Date Filters -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="reports.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body data-page="reports">
+  <!-- Sidebar Navigation -->
+  <div class="sidebar">
+    <div class="logo">
+        <img src="" alt="" class="logo-img">
+    </div>
+    <ul>
+        <li><a href="Performance5.html">Performance</a></li>
+        <li><a href="Customers5.html">Customers</a></li>
+        <li><a href="Reports5.html">Reports</a></li>
+        <li><a href="Campaigns5.html">Campaigns</a></li>
+        <li><a href="Brands5.html">Brands</a></li>
+        <li><a href="Stores5.html">Stores</a></li>
+        <li><a href="Login.html">Log Out</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Dashboard Content -->
+  <div class="dashboard-container">
+    <div class="dashboard-header">
+      <h4>Hi Krishna! See your reports at a glance.</h4>
+      <div class="wordmark">AQUACHE</div>
+      <div class="burger-menu" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <!-- Top Stats -->
+    <div class="dashboard-stats">
+      <div class="stat-card">
+        <h3>Acquired Customers</h3>
+        <p>1,200</p>
+      </div>
+      <div class="stat-card">
+        <h3>Repeat Buyers</h3>
+        <p>800</p>
+      </div>
+      <div class="stat-card">
+        <h3>Active Branches</h3>
+        <p>45</p>
+      </div>
+      <div class="stat-card">
+        <h3>Active Brands</h3>
+        <p>18</p>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="filter-card">
+      <p>Report Filters</p>
+      <div class="filter-container">
+        <div class="filter-group">
+          <label for="start-date"></label>
+          <input class="datepicker" id="start-date" type="text" placeholder="Start Date" />
+        </div>
+        <div class="filter-group">
+          <label for="end-date"></label>
+          <input class="datepicker" id="end-date" type="text" placeholder="End Date" />
+        </div>
+        <div class="filter-group">
+          <label for="region"></label>
+          <select id="region" class="scrollable-select">
+            <option value="" selected disabled>Select a Region</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="city"></label>
+          <select id="city" class="scrollable-select">
+            <option value="" selected disabled>Select a City</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <button class="reset-button">Clear Filters</button>
+          <button>Apply Filters</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data Table -->
+    <div class="table-container">
+      <p>My Voucher Redemptions</p>
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Voucher Code</th>
+            <th>Brand</th>
+            <th>Store</th>
+            <th>Barangay Location</th>
+            <th>City Address</th>
+            <th>Province</th>
+            <th>Region</th>
+            <th>Remarks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2024-11-01</td>
+            <td>11:38 AM</td>
+            <td>ADSF3453</td>
+            <td>Bioflu</td>
+            <td>Mercury Drug</td>
+            <td>Greenhills</td>
+            <td>San Juan</td>
+            <td>Metro Manila</td>
+            <td>NCR</td>
+            <td>GCash</td>
+          </tr>
+          <tr>
+            <td>2024-11-02</td>
+            <td>2:49 PM</td>
+            <td>KJRH5693</td>
+            <td>Alaxan</td>
+            <td>Aling Nena</td>
+            <td>San Juan</td>
+            <td>Taytay</td>
+            <td>Rizal</td>
+            <td>Balance Luzon</td>
+            <td>Cash, Suki</td>
+          </tr>
+          <tr>
+            <td>2024-11-03</td>
+            <td>7:49 PM</td>
+            <td>JHRF3419</td>
+            <td>Biogesic</td>
+            <td>Rose Pharmacy</td>
+            <td>Pareja</td>
+            <td>Butuan</td>
+            <td>Agusan del Norte</td>
+            <td>Mindanao</td>
+            <td>GCash</td>
+          </tr>
+        </tbody>
+      </table>
+      <button>Download Report</button>
+    </div>
+  </div>
+
+  <script src="reports.js"></script>
+</body>
+</html>

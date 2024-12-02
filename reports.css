@@ -1,0 +1,209 @@
+/* General Font Consistency */
+* {
+    font-family: 'Gotham', sans-serif; /* Ensure font consistency across all elements */
+}
+
+/* Filter Container/Card Styling */
+.filter-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: bold;
+}
+
+/* Filter Container */
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Filter Group */
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Make sure the labels are normal and not bold or black */
+.filter-group label {
+    font-size: 14px;
+    color: #666; /* Lighter gray */
+    font-weight: 100;
+}
+
+/* Remove bold styling from selects and inputs */
+.filter-group select, .filter-group input {
+    padding: 8px;
+    font-size: 14px;
+    color: #333; /* Dark gray text */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    outline: none;
+    transition: border 0.3s ease;
+    font-weight: 100;
+}
+
+/* Focus states */
+.filter-group select:focus, .filter-group input:focus {
+    border-color: #27bcac; /* Primary teal color */
+}
+
+/* Button styling */
+.filter-group button {
+    padding: 10px 15px;
+    background-color: #27bcac; /* Primary teal color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.filter-group button:hover {
+    background-color: #1f9f88; /* Slightly darker teal on hover */
+}
+
+/* Reset button style */
+.reset-button {
+    padding: 10px 15px;
+    background-color: #f2f2f2;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.reset-button:hover {
+    background-color: #e0e0e0; /* Light gray on hover */
+}
+
+/* Data Table */
+.table-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 12px;
+}
+
+th {
+    background-color: #27bcac; /* Primary color for header */
+    color: #fff;
+}
+
+td {
+    background-color: #fafafa;
+    color: #333;
+    font-weight: 100;
+}
+
+/* Alternating row colors for readability */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table-container button {
+    background-color: #27bcac; /* Primary teal for button */
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.table-container button:hover {
+    background-color: #7ed2c9; /* Supporting teal for hover */
+}
+
+/* Date Picker */
+.datepicker {
+    display: inline-block;
+    font-weight: 100;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    /* Adjust Table for Mobile */
+    table {
+        font-size: 10px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    th:nth-child(n+6), td:nth-child(n+6) {
+        display: none;
+    }
+
+    /* Mobile table layout adjustments */
+    .table-container {
+        padding: 10px;
+    }
+
+    .table-container td,
+    .table-container th {
+        padding: 8px;
+    }
+}
+
+/* Disable past dates for start and end date pickers */
+input[type="date"]:disabled {
+    background-color: #f0f0f0;
+    color: #ccc;
+}
+
+/* Input Validation */
+input:invalid {
+    border-color: #e3342f;
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Accessibility */
+[aria-invalid="true"] {
+    border-color: #e3342f;
+}
+
+/* Disabled Buttons */
+button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
